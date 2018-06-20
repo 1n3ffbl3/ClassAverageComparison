@@ -6,16 +6,18 @@
 > 6. Publish and include this repo in your Codewar Gallery
 
 
-# [<challenge name>](https://www.codewars.com/kata/<challenge name>)
+# [how-good-are-you-really/train/javascript](https://www.codewars.com/kata/how-good-are-you-really/train/javascript)
 
 Explain the challenge as completely as you can.
 
-<function name>: Function
-* Args: (how many args does this function take?)
-  * (List each arg, it's type, and it's purpose)
-* Return: (what type does this function return?)
-  * (Describe the return value)
-* Behavior: (What does this function do?)
+betterThanAverage: Function
+* Args: 3
+  * studentsInClass = number
+  * arrayCollegesPoints = number
+  * receivedPointsMe = number
+* Return: True or False 
+  * True if receivedPointsMe is bigger than classAverage or False if else
+* Behavior: Takes classAverage and compares it to receivedPointsMe
 
 
 ### Index
@@ -38,7 +40,113 @@ If you find yourself getting stuck or having trouble understanding just what you
 
 Stick with it!  It's best to learn how to analyze your thinking while the problems are simpler.  You don't want to be trying to understand a full project __and__ your problem solving style a the same time.
 
+0. Codewars challenge
+    ```
+    Complete the solution so that it compares my points to average in class.
+    ```
+1. Phrased as a function  
+    ```
+    Write a function called betterThanAverage which calculates average points in class and checks if my points are bigger than this average.
+    ```
+2. Define arguments and return value   
+    ```
+    Write a function that takes in three parameters (studentsInClass: numb; arrayCollegesPoints: numb; receivedPointsMe: numb) and returns true if receivedPointsMe is bigger than classAverge or false is not. 
+    ```
+3. Convert that sentence into high-high level pseudocode.
+    ```
+    solution betterThanAverage(arrayCollegesPoints, studentsInClass, receivedPointsMe)
+    Begin define classAverage
+    	compare classAverage to receivedPointsMe
+        return true or false
+    End solution
+    ```
+4. Declare return value, isolate the challenging bit.
+    ```
+   solution betterThanAverage(arrayCollegesPoints, studentsInClass, receivedPointsMe)
+   		classAverage = arrayCollegesPoints + receivedPointsMe/studentsInClass +1
+        compare receivedPointsMe > classAverage 
+        return true or false
+    End solution   
+    ```
+5. Begin exploring the challenging bit.
+    ```
+    solution betterThanAverage(arrayCollegesPoints, studentsInClass, receivedPointsMe)
+        classAverage = arrayCollegesPoints + receivedPointsMe/studentsInClass +1
+	        compare receivedPointsMe > classAverage
+	        available options:
+	            + for or while loops ?
+	            + if statements ? 
+	            - string methods ?
+        return true or false
+    End solution   
+    ```
+6. Continue exploring the challenging bit.
+    ```
+    solution betterThanAverage(arrayCollegesPoints, studentsInClass, receivedPointsMe)
+        classAverage = arrayCollegesPoints + receivedPointsMe/studentsInClass +1
+	        compare receivedPointsMe > classAverage 
+	        available options: String methods
+	            - String.length
+	            - String.indexOf
+	            - String.search
+	            - String.split
+	            - String.substring
+	            - String.slice
+	            - String.replace
+        return true or false
+    End solution   
+    ```
+7. Continue exploring the challenging bit.
+    ```
+   solution betterThanAverage(arrayCollegesPoints, studentsInClass, receivedPointsMe)
+        classAverage = arrayCollegesPoints + receivedPointsMe/studentsInClass +1
+	        compare receivedPointsMe > classAverage 
+	        two possible strategies:
+	            + if statement
+	            + for loop
+        return true or false
+    End solution   
+    ```
+8. Continue exploring the challenging bit.
+    ```
+	 solution betterThanAverage(arrayCollegesPoints, studentsInClass, receivedPointsMe)
+	     classAverage = arrayCollegesPoints + receivedPointsMe/studentsInClass +1
+		 compare receivedPointsMe > classAverage 
+           ...      
+        return true if receivedPointsMe is bigger than classAverage or false if not
+    End solution   
+    ```
+9. Decided on a strategy.
+    ```
+   solution betterThanAverage(arrayCollegesPoints, studentsInClass, receivedPointsMe)
+	     classAverage = arrayCollegesPoints + receivedPointsMe/studentsInClass +1
+		 if statement :  compare receivedPointsMe > classAverage 
+          return true if receivedPointsMe is bigger than classAverage or false if not
+    End solution    
+    ```
+10. Refactoring pseudocode closer to real code
+    ```
+     solution betterThanAverage(arrayCollegesPoints, studentsInClass, receivedPointsMe)
+	     classAverage = arrayCollegesPoints + receivedPointsMe/studentsInClass +1
+		 if compare receivedPointsMe > classAverage 
+        return true if receivedPointsMe is bigger than classAverage or false if not
+    End solution 
+    ```
+11. Convert pseudocode to real code.
+    ```js
+   function betterThanAverage (arrayCollegesPoints, studentsInClass, receivedPointsMe) {
+      let classAverage = arrayCollegesPoints + receivedPointsMe/studentsInClass +1;
+        if (receivedPointsMe > classAverage ){
+          return true;
+      } else {
+          return false;
+      }
+    }
+    ```    
+
+
 [TOP](#index)
+
 
 ---
 
